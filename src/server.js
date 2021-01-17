@@ -21,7 +21,7 @@ export class Server {
         this.httpServer;
         this.activeSockets = [];
 
-        this.DEFAULT_PORT = 5000;
+        this.DEFAULT_PORT = 443;
 
 
         this.initialize();
