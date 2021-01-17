@@ -46,7 +46,7 @@ export class Server {
             let user;
 
             console.log("Socket connected", socket.handshake.headers.referer, socket.handshake.query, this.activeSockets);
-            if (socket && socket.handshake && socket.handshake.headers && socket.handshake.headers.referer.includes('admin')) {
+            if (socket && socket.handshake && socket.handshake.headers && socket.handshake.headers.referer && socket.handshake.headers.referer.includes('admin')) {
                 console.log("Admin is connected");
                 user = "admin";
             } else {
