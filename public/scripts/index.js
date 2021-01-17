@@ -11,10 +11,8 @@ navigator.getUserMedia(
   }
 );
 
-var socket = io.connect("wss://husbqf2yk6.execute-api.us-east-1.amazonaws.com/",{
-    path: '/dev',
+var socket = io.connect("https://54.175.4.157:8443",{
     reconnectionDelayMax: 3000,
-    transports: ["websocket"],
     query: "urlPath="+window.location.search
 });
 
