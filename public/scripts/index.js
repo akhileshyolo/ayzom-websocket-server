@@ -14,7 +14,8 @@ navigator.getUserMedia(
 var socket = io.connect("wss://husbqf2yk6.execute-api.us-east-1.amazonaws.com/",{
     path: '/dev',
     reconnectionDelayMax: 3000,
-    transports: ["websocket"]
+    transports: ["websocket"],
+    query: "urlPath="+window.location.search
 });
 
 console.log({ socket }, true);

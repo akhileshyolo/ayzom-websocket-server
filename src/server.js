@@ -45,8 +45,8 @@ export class Server {
         this.io.on("connection", socket => {
             let user;
 
-            console.log("Socket connected", {socket} ,socket.handshake.headers.referer, socket.handshake.query, this.activeSockets);
-            if (socket && socket.handshake && socket.handshake.headers && socket.handshake.headers.referer && socket.handshake.headers.referer.includes('admin')) {
+            console.log("Socket connected",{socket}, socket.handshake.query, socket.handshake.query,this.activeSockets);
+            if(socket.handshake.query.urlPath.includes('admin')){
                 console.log("Admin is connected");
                 user = "admin";
             } else {
